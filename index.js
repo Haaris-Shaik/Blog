@@ -3,11 +3,12 @@ import bodyParser from "body-parser"
 
 const app = express();
 const port = 3000;
+const URL = "https://haaris-shaik.github.io/Blog/";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get(`${URL}`, (req, res) => {
     const cards = [
         { title: 'Programming Skills', description: 'This is the first card.', image: 'images/leetcode.png' },
         { title: 'Card 2', description: 'This is the second card.', image: 'image2.jpg' },
